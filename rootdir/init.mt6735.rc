@@ -123,10 +123,6 @@ on post-fs-data
     chown system system /persist
     chmod 0771 /persist
 
-# @2015 silead    
-    mkdir /data/local 0777 root root 
-    mkdir /data/local/tmp 0777 shell shell
-# @2015 silead 
 
 
     # create basic filesystem structure
@@ -507,6 +503,8 @@ on post-fs-data
     chmod 0666 /dev/kd_camera_flashlight
     chmod 0666 /dev/kd_camera_hw_bus2
     chmod 0666 /dev/FM50AF
+    chmod 0660 /dev/BU6424AF
+    chmod 0660 /dev/DW9718AF
     chmod 0666 /dev/CAM_CAL_DRV
 
     chown system camera /dev/camera-sysram
@@ -517,6 +515,8 @@ on post-fs-data
     chown system camera /dev/kd_camera_flashlight
     chown system camera /dev/kd_camera_hw_bus2
     chown system camera /dev/FM50AF
+    chmod 0660 /dev/BU6424AF
+    chmod 0660 /dev/DW9718AF
     chown system camera /dev/CAM_CAL_DRV
 
     #MATV
@@ -613,11 +613,7 @@ on boot
 
     # xlog
     start xlogboot
-
-# @2015 silead    
-    chmod 0666 /dev/silead_fp_dev
-    chmod 0755 /system/bin/fpsvcd
-# @2015 silead    
+    
 
     write /proc/sys/vm/dirty_writeback_centisecs 300
     chmod 0660 /sys/power/autosleep
@@ -731,12 +727,7 @@ on property:vold.decrypt=trigger_shutdown_framework
     start stop_modem
     start swapoff_action
     write /proc/bootprof "trigger_shutdown_framework"
-
-# @ 2015 silead
-service fpsvcd /system/bin/fpsvcd 
-   class main
-   user root   
-# @ 2015 silead   
+ 
 
 service stop_modem /system/bin/md_ctrl 0
     class main
@@ -1186,3 +1177,8 @@ setprop rild.mark_switchuser 0
 chown root /system/bin/pppd
 chmod 4755 /system/bin/pppd
 
+# GuiExt Server init
+service guiext-server /system/bin/guiext-server
+    class main
+    user system
+    group system graphics

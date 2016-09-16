@@ -1,20 +1,19 @@
 # Release name
-PRODUCT_RELEASE_NAME := p8000
+PRODUCT_RELEASE_NAME := zp951
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/elephone/p8000/device_p8000.mk)
+$(call inherit-product, device/zopo/zp951/device_zp951.mk)
 
 # Include generic Mediatek MT6753 part
 $(call inherit-product, device/mediatek/mt6753_common/BoardConfigMT6753_common.mk)
 
 # Include TWRP part
-$(call inherit-product, device/elephone/p8000/twrp.mk)
-
+#$(call inherit-product, device/zopo/zp951/twrp.mk)
 # Include MultiROM part
-$(call inherit-product, device/elephone/p8000/multirom.mk)
+#$(call inherit-product, device/zopo/zp951/multirom.mk)
 
 # Configure dalvik heap
 $(call inherit-product, frameworks/native/build/phone-xxxhdpi-3072-dalvik-heap.mk)
@@ -26,8 +25,8 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := p8000
-PRODUCT_NAME := cm_p8000
-PRODUCT_BRAND := elephone
-PRODUCT_MODEL := p8000
-PRODUCT_MANUFACTURER := elephone
+PRODUCT_DEVICE := zp951
+PRODUCT_NAME := cm_zp951
+PRODUCT_BRAND := Zopo
+PRODUCT_MODEL := Zopo Speed 7
+PRODUCT_MANUFACTURER := Zopo

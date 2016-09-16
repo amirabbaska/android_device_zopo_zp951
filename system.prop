@@ -1,6 +1,6 @@
 #
 #
-# system.prop for P8000, thanks to jianminglok
+# system.prop for zp951, thanks to jianminglok
 #
 
 rild.libpath=/system/lib64/mtk-ril.so
@@ -23,6 +23,9 @@ dalvik.vm.heapsize=512m
 
 # USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
+
+# Enable virtual on screen buttons
+qemu.hw.mainkeys=0
 
 # Power off opt in IPO
 sys.ipo.pwrdncap=2
