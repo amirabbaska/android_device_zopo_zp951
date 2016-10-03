@@ -6,11 +6,11 @@ dirs="frameworks/av frameworks/base frameworks/opt/telephony frameworks/opt/net/
 
 for dir in $dirs ; do
 	cd $rootdirectory
-	cd $dir
+	#cd $dir
 	echo "Reverting $dir patches..."
-	git reset --hard
-	git clean -f -d
-        echo " "
+	#git apply --reverse $rootdirectory/device/ulefone/metal/patches/$dir/*.patch
+	repo sync $dir
+	echo " "
 done
 
 # -----------------------------------
