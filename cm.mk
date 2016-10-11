@@ -10,11 +10,6 @@ $(call inherit-product, device/zopo/zp951/device_zp951.mk)
 # Include generic Mediatek MT6753 part
 $(call inherit-product, device/mediatek/mt6753_common/BoardConfigMT6753_common.mk)
 
-# Include TWRP part
-#$(call inherit-product, device/zopo/zp951/twrp.mk)
-# Include MultiROM part
-#$(call inherit-product, device/zopo/zp951/multirom.mk)
-
 # Configure dalvik heap
 $(call inherit-product, frameworks/native/build/phone-xxxhdpi-3072-dalvik-heap.mk)
 

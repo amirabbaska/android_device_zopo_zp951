@@ -1,6 +1,6 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "Speed 7"
+#define BTM_DEF_LOCAL_NAME   "Zopo Speed 7"
 
 #endif

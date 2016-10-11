@@ -41,11 +41,6 @@ BOARD_HARDWARE_CLASS := device/zopo/zp951/cmhw/
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/zopo/zp951/bluetooth
-
-# Fingerprint Sensor
-#VANZO_FEATURE_ADD_SILEADINC_FP := yes
-#VANZO_FEATURE_FACTORYMODE_USE_ENGLISH := yes
-
 BOARD_EGL_CFG := device/zopo/zp951/configs/egl.cfg
 
 # recovery
@@ -56,6 +51,6 @@ TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/devices/platform/leds-mt65xx/leds/l
 # use power button for selections in recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-# Hack for build
+# Prebuilt Kernel
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 $(shell mkdir -p $(OUT)/target/product/zp951/kernel)

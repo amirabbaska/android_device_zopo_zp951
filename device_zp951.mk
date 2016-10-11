@@ -39,14 +39,15 @@ PRODUCT_COPY_FILES += \
 # TWRP thanks to Hanuma50
 PRODUCT_COPY_FILES += device/zopo/zp951/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
+# Smart Cover (thanks to fire855)
+PRODUCT_PACKAGES += \
+    SmartCover
+
+include device/zopo/zp951/smartcover/SmartCover/Android.mk
+
 
 PRODUCT_COPY_FILES += \
     	device/zopo/zp951/rootdir/etc/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
 
-# limit dex2oat threads to improve thermals
-PRODUCT_PROPERTY_OVERRIDES += \
-    	dalvik.vm.boot-dex2oat-threads=4 \
-    	dalvik.vm.dex2oat-threads=2 \
-    	dalvik.vm.image-dex2oat-threads=4
 
 $(call inherit-product, build/target/product/full.mk)
