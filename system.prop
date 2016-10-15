@@ -55,17 +55,10 @@ ro.audio.silent=0
 ro.zygote.preload.enable=0
 
 # temporary enables NAV bar (soft keys)
-# qemu.hw.mainkeys=0
+qemu.hw.mainkeys=0
 
 ro.kernel.zio=38,108,105,16
-#ro.kernel.qemu=1
-#ro.kernel.qemu.gles=0
-#ro.boot.selinux=disable
-
-# Disable dirty region for Mali
-debug.hwui.render_dirty_regions=false
-
-#ro.sf.lcd_density=480
+ro.sf.lcd_density=480
 
 # performance
 ro.mtk_perf_simple_start_win=1
@@ -114,13 +107,6 @@ ro.frp.pst=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/frp
 ro.sys.usb.storage.type=mtp,mass_storage
 ro.mediatek.version.branch=alps-mp-m0.mp1
 ro.mediatek.version.sdk=4
-ro.setupwizard.mode=OPTIONAL
-ro.com.google.gmsversion=6.0_r2
-ro.com.google.clientidbase=alps-full_wtk6753_65u_m0-{country}
-ro.com.google.clientidbase.ms=alps-full_wtk6753_65u_m0-{country}
-ro.com.google.clientidbase.yt=alps-full_wtk6753_65u_m0-{country}
-ro.com.google.clientidbase.am=alps-full_wtk6753_65u_m0-{country}
-ro.com.google.clientidbase.gmm=alps-full_wtk6753_65u_m0-{country}
 ro.mtk_gemini_support=1
 persist.radio.gemini_support=1
 ril.current.share_modem=2
@@ -135,7 +121,8 @@ ro.mtk_agps_app=1
 ro.mtk_voice_ui_support=1
 ro.mtk_voice_unlock_support=1
 ro.mtk_voice_contact_support=1
-ro.mtk_audio_tuning_tool_ver=V1
+ro.mtk_audio_tuning_tool_ver=V2.2
+ro.mtk_matv_analog_support=1
 ro.mtk_wlan_support=1
 ro.mtk_gps_support=1
 ro.mtk_omacp_support=1
@@ -148,7 +135,9 @@ ro.mtk_oma_drm_support=1
 ro.mtk_cta_drm_support=1
 ro.mtk_widevine_drm_l3_support=1
 ro.mtk_eap_sim_aka=1
+ro.mtk_bt_fm_over_bt=1
 ro.mtk_fm_recording_support=1
+ro.mtk_fm_short_antenna_support=1
 ro.mtk_audio_ape_support=1
 ro.mtk_flv_playback_support=1
 ro.mtk_wmv_playback_support=1
@@ -226,4 +215,4 @@ ro.device.cpu= Octa-core 1.3 GHz
 ro.device.gpu=ARM Mali-T720
 ro.device.rear_cam=13 MP
 ro.device.front_cam=8 MP
-ro.device.screen_res=720X1280
+ro.device.screen_res=1080X1920

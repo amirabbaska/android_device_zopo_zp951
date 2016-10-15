@@ -11,10 +11,8 @@ MTK_APPENDED_DTB_SUPPORT := yes
 
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/ulefone/metal
-#TARGET_KERNEL_SOURCE := kernel/ulefone/metal2
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-#TARGET_KERNEL_CONFIG := wtk6753_65u_m0_Lucky76_defconfig
 TARGET_KERNEL_CONFIG := DarkSense_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_HAS_NO_SELECT_BUTTON := true

@@ -167,9 +167,6 @@ on post-fs-data
     #chown system graphics /dev/mali
 
 
-    #smart audio (add by qianzhibin start)
-    chmod 666 /dev/i2c_smartpa
-    #smart audio (add by qianzhibin end)
 
     # Touch Panel
     # chmod 0664 /dev/touch
@@ -185,6 +182,18 @@ on post-fs-data
     chown root diag /sys/module/tpd_setting/parameters/tpd_em_asamp
     chown root diag /sys/module/tpd_debug/parameters/tpd_em_log
     chown root diag /sys/module/tpd_debug/parameters/tpd_em_log_to_fs
+
+    # Vanzo:tanglei on: Fri, 11 Mar 2016 21:55:41 +0800
+    chmod 0664 /sys/devices/virtual/breathlightdrv/breathlight/open
+    chown system system /sys/devices/virtual/breathlightdrv/breathlight/open
+    chmod 0664 /sys/devices/bus/11008000.i2c/i2c-1/1-005d/gesture
+    chown system system /sys/devices/bus/11008000.i2c/i2c-1/1-005d/gesture
+    chown system system /sys/devices/bus/bus:touch@/tpd_switch_vkey
+
+    chmod 0664 /sys/devices/platform/leds-mt65xx/leds/red/brightness
+    chmod 0664 /sys/devices/platform/leds-mt65xx/leds/green/brightness
+    chmod 0664 /sys/devices/platform/leds-mt65xx/leds/blue/brightness
+    # End of Vanzo:tanglei
 
     chmod 0666 /dev/pmem_multimedia
 
@@ -697,17 +706,6 @@ on boot
 # BT relayer mode USB VCOM
     chown bluetooth radio /dev/ttyGS2
     chmod 0660 /dev/ttyGS2
-
-# FINGERPRINT 
-# Add by LingYang xiehaifei for fingerprint drivers 
-    chmod 0666 /dev/madev0
-    chown system system /dev/madev0
-    chmod 0666 /dev/esfp0
-    chown system system /dev/esfp0
-    chmod 0666 /dev/goodix_fp
-    chown system system /dev/goodix_fp
-
-# End of adding by LingYang xiehaifei Fingerprint drivers
 
 on property:ro.board.platform=mt6753
     chown system system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
@@ -1244,13 +1242,14 @@ service akmd09911 /system/bin/akmd09911
     user system
     group system
     class main
-#ly_zhangtao add for mag sensor start
-service mxg2320d /system/bin/mxg2320d
+
+service qmc6983d /system/bin/qmc6983d
     disabled
     user system
     group system
-    class main
-#ly_zhangtao add for mag sensor end
+    class main 
+    oneshot
+
 service bmm050d /system/bin/bmm050d
     disabled
     user system
@@ -1497,36 +1496,6 @@ service program_binary /system/bin/program_binary_service
     user system
     group graphics
     oneshot
-
-#add by jxring start 2015.03.04  
-service smart_audio /system/bin/smart_audio.sh 
-    user root
-    group root
-    oneshot
-
-on property:persist.radio.change.speaker=1
-    start smart_audio
-#add by jxring end! 2015.03.04
-
-# FINGERPRINT 
-# Add by LingYang xiehaifei for fingerprint service 
-#ET310 etsd
-service etsd  /system/bin/etsd 
-    class late_start
-    user root
-    group root sdcard_r sdcard_rw 
-    
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user root
-    group root sdcard_r sdcard_rw 
-
-#GFX1XM
-service gx_fpd /system/bin/gx_fpd
-    class late_start
-    user root
-    group root system sdcard_r sdcard_rw
-#end by LingYang xiehaifei for fingerprint service 
 
 service vtservice /system/bin/vtservice
     class main

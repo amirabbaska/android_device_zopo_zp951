@@ -85,7 +85,7 @@
       <value>313.6</value> <!-- ~440mA -->
   </array>
   <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
-  <item name="battery.capacity">3050</item>
+  <item name="battery.capacity">2500</item>
 
   <array name="wifi.batchedscan"> <!-- mA -->
       <value>.0002</value> <!-- 1-8/hr -->

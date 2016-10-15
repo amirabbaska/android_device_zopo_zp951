@@ -55,9 +55,6 @@ on post-fs-data
     chmod 0660 /dev/GAF001AF
     chown system camera /dev/GAF001AF
 
-    chmod 0660 /dev/DW9763AF
-    chown system camera /dev/DW9763AF
-
     chmod 0660 /dev/DW9714AF
     chown system camera /dev/DW9714AF
 
@@ -111,15 +108,6 @@ on post-fs-data
 #
 # Connectivity related device nodes & configuration (end)
 #
-
-#LYCONFIG_FINGERPRINT_SUPPORT start
-    chmod 0666 /dev/madev0
-    chown system system /dev/madev0
-    chmod 0666 /dev/esfp0
-    chown system system /dev/esfp0
-    chmod 0666 /dev/goodix_fp
-    chown system system /dev/goodix_fp
-#LYCONFIG_FINGERPRINT_SUPPORT start
 
 
 on init
