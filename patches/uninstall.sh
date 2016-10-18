@@ -8,7 +8,7 @@ for dir in $dirs ; do
 	cd $rootdirectory
 	#cd $dir
 	echo "Reverting $dir patches..."
-	#git apply --reverse $rootdirectory/device/ulefone/metal/patches/$dir/*.patch
+	#git apply --reverse $rootdirectory/device/zopo/zp951/patches/$dir/*.patch
 	repo sync $dir
 	echo " "
 done

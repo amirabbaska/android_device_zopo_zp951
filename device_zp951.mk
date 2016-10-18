@@ -40,7 +40,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Vendor product configurations
-$(call inherit-product-if-exists, vendor/ulefone/metal/metal-vendor.mk)
+$(call inherit-product-if-exists, vendor/zopo/zp951/zp951-vendor.mk)
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.secure=0 \

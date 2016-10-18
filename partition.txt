@@ -1,7 +1,7 @@
-Lucky76:~/cm13/device/ulefone/metal$ adb shell su -c "ls -l /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/"
+Lucky76:~/cm13/device/zopo/zp951$ adb shell su -c "ls -l /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/"
 
 
-Lucky76:~/cm13/device/ulefone/metal$ adb shell cat /proc/partitions
+Lucky76:~/cm13/device/zopo/zp951$ adb shell cat /proc/partitions
 
 major minor  #blocks  name
 

@@ -21,16 +21,16 @@
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, $(LOCAL_PATH)/device_metal.mk)
+$(call inherit-product, $(LOCAL_PATH)/device_zp951.mk)
 
 # Device display
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 # Device identifier
-PRODUCT_BRAND := Ulefone
-PRODUCT_DEVICE := metal
-PRODUCT_MANUFACTURER := Ulefone
-PRODUCT_MODEL := METAL
-PRODUCT_NAME := cm_metal
-PRODUCT_RELEASE_NAME := metal
+PRODUCT_BRAND := zopo
+PRODUCT_DEVICE := zp951
+PRODUCT_MANUFACTURER := zopo
+PRODUCT_MODEL := Speed 7
+PRODUCT_NAME := cm_zp951
+PRODUCT_RELEASE_NAME := zp951

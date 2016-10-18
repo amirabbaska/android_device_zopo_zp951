@@ -1,5 +1,5 @@
 # OTA assert
-TARGET_OTA_ASSERT_DEVICE := metal,METAL,ulefone,Ulefone,wtk6753_65u_m0
+TARGET_OTA_ASSERT_DEVICE := zp951,ZP951,zopo,ZOPO,wtk6753_65u_m0
 
 # Bionic
 

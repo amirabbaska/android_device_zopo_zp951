@@ -1,5 +1,5 @@
-This is patch directory Ulefone Metal
+This is patch directory Zopo Speed 7
 
 cd WORKING_DIR
-sh device/ulefone/metal/patches/install.sh
-sh device/ulefone/metal/patches/uninstall.sh
+sh device/zopo/zp951/patches/install.sh
+sh device/zopo/zp951/patches/uninstall.sh

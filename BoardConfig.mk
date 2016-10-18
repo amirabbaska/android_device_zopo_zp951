@@ -15,14 +15,14 @@
 #
 
 # Device path
-LOCAL_PATH := device/ulefone/metal
+LOCAL_PATH := device/zopo/zp951
 
 # Device board elements
 include $(LOCAL_PATH)/PlatformConfig.mk
 include $(LOCAL_PATH)/board/*.mk
 
 # Device vendor board
--include vendor/ulefone/metal/BoardConfigVendor.mk
+-include vendor/zopo/zp951/BoardConfigVendor.mk
 
 #######################################################################
 
@@ -30,7 +30,7 @@ include $(LOCAL_PATH)/board/*.mk
 TARGET_KMODULES := true
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 
-TARGET_PREBUILT_KERNEL := device/ulefone/metal/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/zopo/zp951/prebuilt/Image.gz-dtb
 BOARD_CUSTOM_BOOTIMG := true
  
 #TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
@@ -57,5 +57,5 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/11270000.usb3/musb-hdrc/gadget/lun%d/file
-# Hack for build
+# Kernel for build
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)

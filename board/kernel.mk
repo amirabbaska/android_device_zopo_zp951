@@ -10,7 +10,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset 
 MTK_APPENDED_DTB_SUPPORT := yes
 
 # Kernel properties
-TARGET_KERNEL_SOURCE := kernel/ulefone/metal
+TARGET_KERNEL_SOURCE := kernel/zopo/zp951
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := DarkSense_defconfig
@@ -18,7 +18,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 
-#TARGET_PREBUILT_KERNEL := device/ulefone/metal/prebuilt/Image.gz-dtb
+#TARGET_PREBUILT_KERNEL := device/zopo/zp951/prebuilt/Image.gz-dtb
 #BOARD_CUSTOM_BOOTIMG := true
 #BOARD_MKBOOTIMG_ARGS := board 1469708408
 

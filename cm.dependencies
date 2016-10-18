@@ -1,14 +1,14 @@
 [
   {
     "remote": "github",
-    "repository": "Lucky76/android_vendor_ulefone_metal",
-    "target_path": "vendor/ulefone/metal",
-    "branch": "master"
+    "repository": "pocarropa/android_vendor_zopo_zp951",
+    "target_path": "vendor/zopo/zp951",
+    "branch": "cm-13"
   },
   {
     "remote": "github",
-    "repository": "Lucky76/android_kernel_ulefone_metal",
-    "target_path": "kernel/ulefone/metal",
+    "repository": "pocarropa/android_kernel_zopo_zp951",
+    "target_path": "kernel/zopo/zp951",
     "branch": "master"
   }
 ] 

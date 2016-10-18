@@ -1,5 +1,5 @@
 LOCAL_PATH:= $(call my-dir)
-ifneq ($(filter metal,$(TARGET_DEVICE)),)
+ifneq ($(filter zp951,$(TARGET_DEVICE)),)
 include $(CLEAR_VARS)
 
 # Device init files
