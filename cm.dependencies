@@ -5,10 +5,4 @@
     "target_path": "vendor/zopo/zp951",
     "branch": "cm-13"
   },
-  {
-    "remote": "github",
-    "repository": "pocarropa/android_kernel_zopo_zp951",
-    "target_path": "kernel/zopo/zp951",
-    "branch": "master"
-  }
 ] 
