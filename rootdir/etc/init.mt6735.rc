@@ -1243,8 +1243,7 @@ service akmd09911 /system/bin/akmd09911
     group system
     class main
 
-service qmc6983d /system/bin/qmc6983d
-    disabled
+service qmcX983d /system/bin/qmcX983d
     user system
     group system
     class main 
